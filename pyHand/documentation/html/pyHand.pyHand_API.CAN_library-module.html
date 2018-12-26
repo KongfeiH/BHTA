@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyHand.pyHand_API.CAN_library</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;pyHand ::
+        Package&nbsp;pyHand_API ::
+        Module&nbsp;CAN_library
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyHand.pyHand_API.CAN_library-module.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module CAN_library</h1><p class="nomargin-top"><span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html">source&nbsp;code</a></span></p>
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyHand.pyHand_API.CAN_library.TPCANMsg-class.html" class="summary-name">TPCANMsg</a><br />
+      Represents a PCAN message
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyHand.pyHand_API.CAN_library.TPCANTimestamp-class.html" class="summary-name">TPCANTimestamp</a><br />
+      Represents a timestamp of a received PCAN message Total 
+        Microseconds = micros + 1000 * millis + 0xFFFFFFFF * 1000 * 
+        millis_overflow
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="pyHand.pyHand_API.CAN_library.PCANBasic-class.html" class="summary-name">PCANBasic</a><br />
+      PCAN-Basic API class implementation
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_NONEBUS"></a><span class="summary-name">PCAN_NONEBUS</span> = <code title="c_ubyte(0)">c_ubyte(0)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ISABUS1"></a><span class="summary-name">PCAN_ISABUS1</span> = <code title="c_ubyte(33)">c_ubyte(33)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ISABUS2"></a><span class="summary-name">PCAN_ISABUS2</span> = <code title="c_ubyte(34)">c_ubyte(34)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ISABUS3"></a><span class="summary-name">PCAN_ISABUS3</span> = <code title="c_ubyte(35)">c_ubyte(35)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ISABUS4"></a><span class="summary-name">PCAN_ISABUS4</span> = <code title="c_ubyte(36)">c_ubyte(36)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ISABUS5"></a><span class="summary-name">PCAN_ISABUS5</span> = <code title="c_ubyte(37)">c_ubyte(37)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ISABUS6"></a><span class="summary-name">PCAN_ISABUS6</span> = <code title="c_ubyte(38)">c_ubyte(38)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ISABUS7"></a><span class="summary-name">PCAN_ISABUS7</span> = <code title="c_ubyte(39)">c_ubyte(39)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ISABUS8"></a><span class="summary-name">PCAN_ISABUS8</span> = <code title="c_ubyte(40)">c_ubyte(40)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_DNGBUS1"></a><span class="summary-name">PCAN_DNGBUS1</span> = <code title="c_ubyte(49)">c_ubyte(49)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_PCIBUS1"></a><span class="summary-name">PCAN_PCIBUS1</span> = <code title="c_ubyte(65)">c_ubyte(65)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_PCIBUS2"></a><span class="summary-name">PCAN_PCIBUS2</span> = <code title="c_ubyte(66)">c_ubyte(66)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_PCIBUS3"></a><span class="summary-name">PCAN_PCIBUS3</span> = <code title="c_ubyte(67)">c_ubyte(67)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_PCIBUS4"></a><span class="summary-name">PCAN_PCIBUS4</span> = <code title="c_ubyte(68)">c_ubyte(68)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_PCIBUS5"></a><span class="summary-name">PCAN_PCIBUS5</span> = <code title="c_ubyte(69)">c_ubyte(69)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_PCIBUS6"></a><span class="summary-name">PCAN_PCIBUS6</span> = <code title="c_ubyte(70)">c_ubyte(70)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_PCIBUS7"></a><span class="summary-name">PCAN_PCIBUS7</span> = <code title="c_ubyte(71)">c_ubyte(71)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_PCIBUS8"></a><span class="summary-name">PCAN_PCIBUS8</span> = <code title="c_ubyte(72)">c_ubyte(72)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_USBBUS1"></a><span class="summary-name">PCAN_USBBUS1</span> = <code title="c_ubyte(81)">c_ubyte(81)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_USBBUS2"></a><span class="summary-name">PCAN_USBBUS2</span> = <code title="c_ubyte(82)">c_ubyte(82)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_USBBUS3"></a><span class="summary-name">PCAN_USBBUS3</span> = <code title="c_ubyte(83)">c_ubyte(83)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_USBBUS4"></a><span class="summary-name">PCAN_USBBUS4</span> = <code title="c_ubyte(84)">c_ubyte(84)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_USBBUS5"></a><span class="summary-name">PCAN_USBBUS5</span> = <code title="c_ubyte(85)">c_ubyte(85)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_USBBUS6"></a><span class="summary-name">PCAN_USBBUS6</span> = <code title="c_ubyte(86)">c_ubyte(86)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_USBBUS7"></a><span class="summary-name">PCAN_USBBUS7</span> = <code title="c_ubyte(87)">c_ubyte(87)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_USBBUS8"></a><span class="summary-name">PCAN_USBBUS8</span> = <code title="c_ubyte(88)">c_ubyte(88)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_PCCBUS1"></a><span class="summary-name">PCAN_PCCBUS1</span> = <code title="c_ubyte(97)">c_ubyte(97)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_PCCBUS2"></a><span class="summary-name">PCAN_PCCBUS2</span> = <code title="c_ubyte(98)">c_ubyte(98)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_OK"></a><span class="summary-name">PCAN_ERROR_OK</span> = <code title="0">0</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_XMTFULL"></a><span class="summary-name">PCAN_ERROR_XMTFULL</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_OVERRUN"></a><span class="summary-name">PCAN_ERROR_OVERRUN</span> = <code title="2">2</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_BUSLIGHT"></a><span class="summary-name">PCAN_ERROR_BUSLIGHT</span> = <code title="4">4</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_BUSHEAVY"></a><span class="summary-name">PCAN_ERROR_BUSHEAVY</span> = <code title="8">8</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_BUSOFF"></a><span class="summary-name">PCAN_ERROR_BUSOFF</span> = <code title="16">16</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_ANYBUSERR"></a><span class="summary-name">PCAN_ERROR_ANYBUSERR</span> = <code title="28">28</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_QRCVEMPTY"></a><span class="summary-name">PCAN_ERROR_QRCVEMPTY</span> = <code title="32">32</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_QOVERRUN"></a><span class="summary-name">PCAN_ERROR_QOVERRUN</span> = <code title="64">64</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_QXMTFULL"></a><span class="summary-name">PCAN_ERROR_QXMTFULL</span> = <code title="128">128</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_REGTEST"></a><span class="summary-name">PCAN_ERROR_REGTEST</span> = <code title="256">256</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_NODRIVER"></a><span class="summary-name">PCAN_ERROR_NODRIVER</span> = <code title="512">512</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_HWINUSE"></a><span class="summary-name">PCAN_ERROR_HWINUSE</span> = <code title="1024">1024</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_NETINUSE"></a><span class="summary-name">PCAN_ERROR_NETINUSE</span> = <code title="2048">2048</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_ILLHW"></a><span class="summary-name">PCAN_ERROR_ILLHW</span> = <code title="5120">5120</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_ILLNET"></a><span class="summary-name">PCAN_ERROR_ILLNET</span> = <code title="6144">6144</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_ILLCLIENT"></a><span class="summary-name">PCAN_ERROR_ILLCLIENT</span> = <code title="7168">7168</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_ILLHANDLE"></a><span class="summary-name">PCAN_ERROR_ILLHANDLE</span> = <code title="7168">7168</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_RESOURCE"></a><span class="summary-name">PCAN_ERROR_RESOURCE</span> = <code title="8192">8192</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_ILLPARAMTYPE"></a><span class="summary-name">PCAN_ERROR_ILLPARAMTYPE</span> = <code title="16384">16384</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_ILLPARAMVAL"></a><span class="summary-name">PCAN_ERROR_ILLPARAMVAL</span> = <code title="32768">32768</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_UNKNOWN"></a><span class="summary-name">PCAN_ERROR_UNKNOWN</span> = <code title="65536">65536</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_ILLDATA"></a><span class="summary-name">PCAN_ERROR_ILLDATA</span> = <code title="131072">131072</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ERROR_INITIALIZE"></a><span class="summary-name">PCAN_ERROR_INITIALIZE</span> = <code title="262144">262144</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_NONE"></a><span class="summary-name">PCAN_NONE</span> = <code title="c_ubyte(0)">c_ubyte(0)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_PEAKCAN"></a><span class="summary-name">PCAN_PEAKCAN</span> = <code title="c_ubyte(1)">c_ubyte(1)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_ISA"></a><span class="summary-name">PCAN_ISA</span> = <code title="c_ubyte(2)">c_ubyte(2)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_DNG"></a><span class="summary-name">PCAN_DNG</span> = <code title="c_ubyte(3)">c_ubyte(3)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_PCI"></a><span class="summary-name">PCAN_PCI</span> = <code title="c_ubyte(4)">c_ubyte(4)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_USB"></a><span class="summary-name">PCAN_USB</span> = <code title="c_ubyte(5)">c_ubyte(5)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_PCC"></a><span class="summary-name">PCAN_PCC</span> = <code title="c_ubyte(6)">c_ubyte(6)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_DEVICE_NUMBER"></a><span class="summary-name">PCAN_DEVICE_NUMBER</span> = <code title="c_ubyte(1)">c_ubyte(1)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_5VOLTS_POWER"></a><span class="summary-name">PCAN_5VOLTS_POWER</span> = <code title="c_ubyte(2)">c_ubyte(2)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_RECEIVE_EVENT"></a><span class="summary-name">PCAN_RECEIVE_EVENT</span> = <code title="c_ubyte(3)">c_ubyte(3)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_MESSAGE_FILTER"></a><span class="summary-name">PCAN_MESSAGE_FILTER</span> = <code title="c_ubyte(4)">c_ubyte(4)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_API_VERSION"></a><span class="summary-name">PCAN_API_VERSION</span> = <code title="c_ubyte(5)">c_ubyte(5)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_CHANNEL_VERSION"></a><span class="summary-name">PCAN_CHANNEL_VERSION</span> = <code title="c_ubyte(6)">c_ubyte(6)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_BUSOFF_AUTORESET"></a><span class="summary-name">PCAN_BUSOFF_AUTORESET</span> = <code title="c_ubyte(7)">c_ubyte(7)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_LISTEN_ONLY"></a><span class="summary-name">PCAN_LISTEN_ONLY</span> = <code title="c_ubyte(8)">c_ubyte(8)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_LOG_LOCATION"></a><span class="summary-name">PCAN_LOG_LOCATION</span> = <code title="c_ubyte(9)">c_ubyte(9)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_LOG_STATUS"></a><span class="summary-name">PCAN_LOG_STATUS</span> = <code title="c_ubyte(10)">c_ubyte(10)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_LOG_CONFIGURE"></a><span class="summary-name">PCAN_LOG_CONFIGURE</span> = <code title="c_ubyte(11)">c_ubyte(11)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_LOG_TEXT"></a><span class="summary-name">PCAN_LOG_TEXT</span> = <code title="c_ubyte(12)">c_ubyte(12)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_CHANNEL_CONDITION"></a><span class="summary-name">PCAN_CHANNEL_CONDITION</span> = <code title="c_ubyte(13)">c_ubyte(13)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_HARDWARE_NAME"></a><span class="summary-name">PCAN_HARDWARE_NAME</span> = <code title="c_ubyte(14)">c_ubyte(14)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_RECEIVE_STATUS"></a><span class="summary-name">PCAN_RECEIVE_STATUS</span> = <code title="c_ubyte(15)">c_ubyte(15)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_CONTROLLER_NUMBER"></a><span class="summary-name">PCAN_CONTROLLER_NUMBER</span> = <code title="c_ubyte(16)">c_ubyte(16)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_PARAMETER_OFF"></a><span class="summary-name">PCAN_PARAMETER_OFF</span> = <code title="0">0</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_PARAMETER_ON"></a><span class="summary-name">PCAN_PARAMETER_ON</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_FILTER_CLOSE"></a><span class="summary-name">PCAN_FILTER_CLOSE</span> = <code title="0">0</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_FILTER_OPEN"></a><span class="summary-name">PCAN_FILTER_OPEN</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_FILTER_CUSTOM"></a><span class="summary-name">PCAN_FILTER_CUSTOM</span> = <code title="2">2</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_CHANNEL_UNAVAILABLE"></a><span class="summary-name">PCAN_CHANNEL_UNAVAILABLE</span> = <code title="0">0</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_CHANNEL_AVAILABLE"></a><span class="summary-name">PCAN_CHANNEL_AVAILABLE</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_CHANNEL_OCCUPIED"></a><span class="summary-name">PCAN_CHANNEL_OCCUPIED</span> = <code title="2">2</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="LOG_FUNCTION_DEFAULT"></a><span class="summary-name">LOG_FUNCTION_DEFAULT</span> = <code title="0">0</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="LOG_FUNCTION_ENTRY"></a><span class="summary-name">LOG_FUNCTION_ENTRY</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="LOG_FUNCTION_PARAMETERS"></a><span class="summary-name">LOG_FUNCTION_PARAMETERS</span> = <code title="2">2</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="LOG_FUNCTION_LEAVE"></a><span class="summary-name">LOG_FUNCTION_LEAVE</span> = <code title="4">4</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="LOG_FUNCTION_WRITE"></a><span class="summary-name">LOG_FUNCTION_WRITE</span> = <code title="8">8</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="LOG_FUNCTION_READ"></a><span class="summary-name">LOG_FUNCTION_READ</span> = <code title="16">16</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="LOG_FUNCTION_ALL"></a><span class="summary-name">LOG_FUNCTION_ALL</span> = <code title="65535">65535</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_MESSAGE_STANDARD"></a><span class="summary-name">PCAN_MESSAGE_STANDARD</span> = <code title="c_ubyte(0)">c_ubyte(0)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_MESSAGE_RTR"></a><span class="summary-name">PCAN_MESSAGE_RTR</span> = <code title="c_ubyte(1)">c_ubyte(1)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_MESSAGE_EXTENDED"></a><span class="summary-name">PCAN_MESSAGE_EXTENDED</span> = <code title="c_ubyte(2)">c_ubyte(2)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_MESSAGE_STATUS"></a><span class="summary-name">PCAN_MESSAGE_STATUS</span> = <code title="c_ubyte(128)">c_ubyte(128)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_MODE_STANDARD"></a><span class="summary-name">PCAN_MODE_STANDARD</span> = <code title="c_ubyte(0)">c_ubyte(0)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_MODE_EXTENDED"></a><span class="summary-name">PCAN_MODE_EXTENDED</span> = <code title="c_ubyte(2)">c_ubyte(2)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_BAUD_1M"></a><span class="summary-name">PCAN_BAUD_1M</span> = <code title="c_ushort(20)">c_ushort(20)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_BAUD_800K"></a><span class="summary-name">PCAN_BAUD_800K</span> = <code title="c_ushort(22)">c_ushort(22)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_BAUD_500K"></a><span class="summary-name">PCAN_BAUD_500K</span> = <code title="c_ushort(28)">c_ushort(28)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_BAUD_250K"></a><span class="summary-name">PCAN_BAUD_250K</span> = <code title="c_ushort(284)">c_ushort(284)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_BAUD_125K"></a><span class="summary-name">PCAN_BAUD_125K</span> = <code title="c_ushort(796)">c_ushort(796)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_BAUD_100K"></a><span class="summary-name">PCAN_BAUD_100K</span> = <code title="c_ushort(17199)">c_ushort(17199)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_BAUD_95K"></a><span class="summary-name">PCAN_BAUD_95K</span> = <code title="c_ushort(49998)">c_ushort(49998)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_BAUD_83K"></a><span class="summary-name">PCAN_BAUD_83K</span> = <code title="c_ushort(19220)">c_ushort(19220)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_BAUD_50K"></a><span class="summary-name">PCAN_BAUD_50K</span> = <code title="c_ushort(18223)">c_ushort(18223)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_BAUD_47K"></a><span class="summary-name">PCAN_BAUD_47K</span> = <code title="c_ushort(5140)">c_ushort(5140)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_BAUD_33K"></a><span class="summary-name">PCAN_BAUD_33K</span> = <code title="c_ushort(7444)">c_ushort(7444)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_BAUD_20K"></a><span class="summary-name">PCAN_BAUD_20K</span> = <code title="c_ushort(21295)">c_ushort(21295)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_BAUD_10K"></a><span class="summary-name">PCAN_BAUD_10K</span> = <code title="c_ushort(26415)">c_ushort(26415)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_BAUD_5K"></a><span class="summary-name">PCAN_BAUD_5K</span> = <code title="c_ushort(32639)">c_ushort(32639)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_TYPE_ISA"></a><span class="summary-name">PCAN_TYPE_ISA</span> = <code title="c_ubyte(1)">c_ubyte(1)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_TYPE_ISA_SJA"></a><span class="summary-name">PCAN_TYPE_ISA_SJA</span> = <code title="c_ubyte(9)">c_ubyte(9)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_TYPE_ISA_PHYTEC"></a><span class="summary-name">PCAN_TYPE_ISA_PHYTEC</span> = <code title="c_ubyte(4)">c_ubyte(4)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_TYPE_DNG"></a><span class="summary-name">PCAN_TYPE_DNG</span> = <code title="c_ubyte(2)">c_ubyte(2)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_TYPE_DNG_EPP"></a><span class="summary-name">PCAN_TYPE_DNG_EPP</span> = <code title="c_ubyte(3)">c_ubyte(3)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_TYPE_DNG_SJA"></a><span class="summary-name">PCAN_TYPE_DNG_SJA</span> = <code title="c_ubyte(5)">c_ubyte(5)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PCAN_TYPE_DNG_SJA_EPP"></a><span class="summary-name">PCAN_TYPE_DNG_SJA_EPP</span> = <code title="c_ubyte(6)">c_ubyte(6)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'pyHand.pyHand_API'"><code class="variable-quote">'</code><code class="variable-string">pyHand.pyHand_API</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Aug 09 15:22:33 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

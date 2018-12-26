@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>pyHand.pyHand_API.CAN_library.PCANBasic</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;pyHand ::
+        Package&nbsp;pyHand_API ::
+        <a href="pyHand.pyHand_API.CAN_library-module.html">Module&nbsp;CAN_library</a> ::
+        Class&nbsp;PCANBasic
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="pyHand.pyHand_API.CAN_library.PCANBasic-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class PCANBasic</h1><p class="nomargin-top"><span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic">source&nbsp;code</a></span></p>
+<p>PCAN-Basic API class implementation</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__init__"></a><span class="summary-sig-name">__init__</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyHand.pyHand_API.CAN_library.PCANBasic-class.html#Initialize" class="summary-sig-name">Initialize</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">Channel</span>,
+        <span class="summary-sig-arg">Btr0Btr1</span>,
+        <span class="summary-sig-arg">HwType</span>=<span class="summary-sig-default">c_ubyte(0)</span>,
+        <span class="summary-sig-arg">IOPort</span>=<span class="summary-sig-default">c_ulong(0L)</span>,
+        <span class="summary-sig-arg">Interrupt</span>=<span class="summary-sig-default">c_ushort(0)</span>)</span><br />
+      Initializes a PCAN Channel</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.Initialize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyHand.pyHand_API.CAN_library.PCANBasic-class.html#Uninitialize" class="summary-sig-name">Uninitialize</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">Channel</span>)</span><br />
+      Uninitializes one or all PCAN Channels initialized by CAN_Initialize</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.Uninitialize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyHand.pyHand_API.CAN_library.PCANBasic-class.html#Reset" class="summary-sig-name">Reset</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">Channel</span>)</span><br />
+      Resets the receive and transmit queues of the PCAN Channel</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.Reset">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyHand.pyHand_API.CAN_library.PCANBasic-class.html#GetStatus" class="summary-sig-name">GetStatus</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">Channel</span>)</span><br />
+      Gets the current status of a PCAN Channel</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.GetStatus">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyHand.pyHand_API.CAN_library.PCANBasic-class.html#Read" class="summary-sig-name">Read</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">Channel</span>)</span><br />
+      Reads a CAN message from the receive queue of a PCAN Channel</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.Read">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyHand.pyHand_API.CAN_library.PCANBasic-class.html#Write" class="summary-sig-name">Write</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">Channel</span>,
+        <span class="summary-sig-arg">MessageBuffer</span>)</span><br />
+      Transmits a CAN message</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.Write">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyHand.pyHand_API.CAN_library.PCANBasic-class.html#FilterMessages" class="summary-sig-name">FilterMessages</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">Channel</span>,
+        <span class="summary-sig-arg">FromID</span>,
+        <span class="summary-sig-arg">ToID</span>,
+        <span class="summary-sig-arg">Mode</span>)</span><br />
+      Configures the reception filter</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.FilterMessages">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyHand.pyHand_API.CAN_library.PCANBasic-class.html#GetValue" class="summary-sig-name">GetValue</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">Channel</span>,
+        <span class="summary-sig-arg">Parameter</span>)</span><br />
+      Retrieves a PCAN Channel value</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.GetValue">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyHand.pyHand_API.CAN_library.PCANBasic-class.html#SetValue" class="summary-sig-name">SetValue</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">Channel</span>,
+        <span class="summary-sig-arg">Parameter</span>,
+        <span class="summary-sig-arg">Buffer</span>)</span><br />
+      Returns a descriptive text of a given TPCANStatus error
+  code, in any desired language</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.SetValue">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="pyHand.pyHand_API.CAN_library.PCANBasic-class.html#GetErrorText" class="summary-sig-name">GetErrorText</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">Error</span>,
+        <span class="summary-sig-arg">Language</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Configures or sets a PCAN Channel value</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.GetErrorText">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="Initialize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Initialize</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">Channel</span>,
+        <span class="sig-arg">Btr0Btr1</span>,
+        <span class="sig-arg">HwType</span>=<span class="sig-default">c_ubyte(0)</span>,
+        <span class="sig-arg">IOPort</span>=<span class="sig-default">c_ulong(0L)</span>,
+        <span class="sig-arg">Interrupt</span>=<span class="sig-default">c_ushort(0)</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.Initialize">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+  Initializes a PCAN Channel
+
+Parameters:
+  Channel  : A TPCANHandle representing a PCAN Channel
+  Btr0Btr1 : The speed for the communication (BTR0BTR1 code)
+  HwType   : NON PLUG&amp;PLAY: The type of hardware and operation mode
+  IOPort   : NON PLUG&amp;PLAY: The I/O address for the parallel port
+  Interrupt: NON PLUG&amp;PLAY: Interrupt number of the parallel port
+
+Returns:
+  A TPCANStatus error code
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="Uninitialize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Uninitialize</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">Channel</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.Uninitialize">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+  Uninitializes one or all PCAN Channels initialized by CAN_Initialize
+  
+Remarks:
+  Giving the TPCANHandle value &quot;PCAN_NONEBUS&quot;, uninitialize all initialized channels
+  
+Parameters:
+  Channel  : A TPCANHandle representing a PCAN Channel
+
+Returns:
+  A TPCANStatus error code
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="Reset"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Reset</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">Channel</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.Reset">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+  Resets the receive and transmit queues of the PCAN Channel
+  
+Remarks:
+  A reset of the CAN controller is not performed
+  
+Parameters:
+  Channel  : A TPCANHandle representing a PCAN Channel
+
+Returns:
+  A TPCANStatus error code
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="GetStatus"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetStatus</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">Channel</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.GetStatus">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+  Gets the current status of a PCAN Channel
+  
+Parameters:
+  Channel  : A TPCANHandle representing a PCAN Channel
+
+Returns:
+  A TPCANStatus error code
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="Read"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Read</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">Channel</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.Read">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+  Reads a CAN message from the receive queue of a PCAN Channel
+
+Remarks:
+  The return value of this method is a 3-touple, where 
+  the first value is the result (TPCANStatus) of the method.
+  The order of the values are:
+  [0]: A TPCANStatus error code
+  [1]: A TPCANMsg structure with the CAN message read
+  [2]: A TPCANTimestamp structure with the time when a message was read
+  
+Parameters:
+  Channel  : A TPCANHandle representing a PCAN Channel
+
+Returns:
+  A touple with three values
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="Write"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Write</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">Channel</span>,
+        <span class="sig-arg">MessageBuffer</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.Write">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+  Transmits a CAN message 
+  
+Parameters:
+  Channel      : A TPCANHandle representing a PCAN Channel
+  MessageBuffer: A TPCANMsg representing the CAN message to be sent
+
+Returns:
+  A TPCANStatus error code
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="FilterMessages"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">FilterMessages</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">Channel</span>,
+        <span class="sig-arg">FromID</span>,
+        <span class="sig-arg">ToID</span>,
+        <span class="sig-arg">Mode</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.FilterMessages">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+  Configures the reception filter
+
+Remarks:
+  The message filter will be expanded with every call to this function.
+  If it is desired to reset the filter, please use the 'SetValue' function.
+
+Parameters:
+  Channel : A TPCANHandle representing a PCAN Channel
+  FromID  : A c_ulong value with the lowest CAN ID to be received
+  ToID    : A c_ulong value with the highest CAN ID to be received
+  Mode    : A TPCANMode representing the message type (Standard, 11-bit 
+            identifier, or Extended, 29-bit identifier)
+
+Returns:
+  A TPCANStatus error code
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="GetValue"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetValue</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">Channel</span>,
+        <span class="sig-arg">Parameter</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.GetValue">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+  Retrieves a PCAN Channel value
+
+Remarks:
+  Parameters can be present or not according with the kind
+  of Hardware (PCAN Channel) being used. If a parameter is not available,
+  a PCAN_ERROR_ILLPARAMTYPE error will be returned.
+  
+  The return value of this method is a 2-touple, where 
+  the first value is the result (TPCANStatus) of the method and
+  the second one, the asked value 
+  
+Parameters:
+  Channel   : A TPCANHandle representing a PCAN Channel
+  Parameter : The TPCANParameter parameter to get
+
+Returns:
+  A touple with 2 values
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="SetValue"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">SetValue</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">Channel</span>,
+        <span class="sig-arg">Parameter</span>,
+        <span class="sig-arg">Buffer</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.SetValue">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+  Returns a descriptive text of a given TPCANStatus error
+  code, in any desired language
+
+Remarks:
+  Parameters can be present or not according with the kind
+  of Hardware (PCAN Channel) being used. If a parameter is not available,
+  a PCAN_ERROR_ILLPARAMTYPE error will be returned.
+  
+Parameters:
+  Channel      : A TPCANHandle representing a PCAN Channel
+  Parameter    : The TPCANParameter parameter to set
+  Buffer       : Buffer with the value to be set
+  BufferLength : Size in bytes of the buffer
+
+Returns:
+  A TPCANStatus error code
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="GetErrorText"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">GetErrorText</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">Error</span>,
+        <span class="sig-arg">Language</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="pyHand.pyHand_API.CAN_library-pysrc.html#PCANBasic.GetErrorText">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+  Configures or sets a PCAN Channel value
+
+Remarks:
+
+  The current languages available for translation are:
+  Neutral (0x00), German (0x07), English (0x09), Spanish (0x0A),
+  Italian (0x10) and French (0x0C)          
+
+  The return value of this method is a 2-touple, where 
+  the first value is the result (TPCANStatus) of the method and
+  the second one, the error text
+  
+Parameters:
+  Error    : A TPCANStatus error code
+  Language : Indicates a 'Primary language ID' (Default is Neutral(0))
+
+Returns:
+  A touple with 2 values
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Fri Aug 09 15:22:33 2013
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
