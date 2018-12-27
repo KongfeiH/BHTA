@@ -35,7 +35,7 @@ class HandSensor:
         self.finger1 = range(24)
         self.finger2 = range(24)
         self.finger3 = range(24)
-        self.spread = range(24)
+        self.spread  = range(24)
 
         # Now we need to read all 20 CAN frames for the tactile data.
         # Five from each of the four joints.
