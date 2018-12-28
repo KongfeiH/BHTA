@@ -54,6 +54,7 @@ class Hand():
         # to clear the area so that the hand is not obstructed.
         hand.initialize()
         hand.init_hand()
+
         print "OK"
 
     def OpenACloseDemo(self):
@@ -186,15 +187,18 @@ class HandSensor(object):
         if index != 20: # There are only 24 sensors per array.
             tact_array[index + 4] = round(((data[6]<<8 & 0xF00)| data[7])/256.0, 2)
 
+
 class SensorShow(HandSensor):
     def __init__(self):
          super(SensorShow,self).__init__()
+         this.sensorData = np.array(self.finger1+self.finger2+self.finger3+self.spread)
          #self.DataShow()
 
     def DataShow(self):
         fig = plt.figure()
         plt.ion()
         while True:
+            np.vstack((this.sensorData,np.array(self.finger1+self.finger2+self.finger3+self.spread)))
             dataTest = np.array([self.finger1[0:3],
                                  self.finger1[3:6],
                                  self.finger1[6:9],
@@ -240,10 +244,12 @@ class SensorShow(HandSensor):
             ax.imshow(dataTest2)
             ax = fig.add_subplot(224)
             ax.imshow(dataTest3)
-            plt.pause(0.1)
+            plt.pause(0.09)
 
             plt.ioff()
             self.get_full_tact()
+    def GetData(self):
+        return this.sensorData
     def DynamicData(self):
         dataTest=[]
         plt.ion()
