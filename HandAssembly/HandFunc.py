@@ -66,7 +66,11 @@ class Hand():
 
     def Close(self):
         # Close fingers by setting the Move target to fully closed.
-        hand.set_property(HAND_GROUP, M, MAX_ENC)
+        hand.set_property(SPREAD, MODE, MODE_IDLE)
+        #hand.close_grasp()
+        hand.set_property(FINGER1, M, MAX_ENC)
+        hand.set_property(FINGER2, M, MAX_ENC)
+        hand.set_property(FINGER3, M, MAX_ENC)
         # ... and don't forget to stop the spread quickly.
         hand.set_property(SPREAD, MODE, MODE_IDLE)
         return True
@@ -191,65 +195,69 @@ class HandSensor(object):
 class SensorShow(HandSensor):
     def __init__(self):
          super(SensorShow,self).__init__()
-         this.sensorData = np.array(self.finger1+self.finger2+self.finger3+self.spread)
+         self.sensorData = np.array(self.finger1+self.finger2+self.finger3+self.spread)
          #self.DataShow()
 
     def DataShow(self):
         fig = plt.figure()
         plt.ion()
         while True:
-            np.vstack((this.sensorData,np.array(self.finger1+self.finger2+self.finger3+self.spread)))
-            dataTest = np.array([self.finger1[0:3],
-                                 self.finger1[3:6],
-                                 self.finger1[6:9],
-                                 self.finger1[9:12],
-                                 self.finger1[12:15],
-                                 self.finger1[15:18],
-                                 self.finger1[18:21],
-                                 self.finger1[21:24]])
-            dataTest1 = np.array([self.finger2[0:3],
-                                  self.finger2[3:6],
-                                  self.finger2[6:9],
-                                  self.finger2[9:12],
-                                  self.finger2[12:15],
-                                  self.finger2[15:18],
-                                  self.finger2[18:21],
-                                  self.finger2[21:24]])
-            dataTest2 = np.array([self.finger3[0:3],
-                                  self.finger3[3:6],
-                                  self.finger3[6:9],
-                                  self.finger3[9:12],
-                                  self.finger3[12:15],
-                                  self.finger3[15:18],
-                                  self.finger3[18:21],
-                                  self.finger3[21:24]])
+            self.sensorData=np.vstack((self.sensorData,self.finger1+self.finger2+self.finger3+self.spread))
 
-            x = self.spread[0:5]
-            x.insert(0, 0)
-            x.append(0)
-            y = self.spread[19:24]
-            y.insert(0, 0)
-            y.append(0)
-            dataTest3 = np.array([x,
-                                  self.spread[5:12],
-                                  self.spread[12:19],
-                                  y])
-            # dataTest3.
-            plt.clf()
-            ax = fig.add_subplot(221)
-            ax.imshow(dataTest)
-            ax = fig.add_subplot(222)
-            ax.imshow(dataTest1)
-            ax = fig.add_subplot(223)
-            ax.imshow(dataTest2)
-            ax = fig.add_subplot(224)
-            ax.imshow(dataTest3)
-            plt.pause(0.09)
-
-            plt.ioff()
+           # self.Show()
+            time.sleep(0.09)
             self.get_full_tact()
+    def Show(self):
+        dataTest = np.array([self.finger1[0:3],
+                             self.finger1[3:6],
+                             self.finger1[6:9],
+                             self.finger1[9:12],
+                             self.finger1[12:15],
+                             self.finger1[15:18],
+                             self.finger1[18:21],
+                             self.finger1[21:24]])
+        dataTest1 = np.array([self.finger2[0:3],
+                              self.finger2[3:6],
+                              self.finger2[6:9],
+                              self.finger2[9:12],
+                              self.finger2[12:15],
+                              self.finger2[15:18],
+                              self.finger2[18:21],
+                              self.finger2[21:24]])
+        dataTest2 = np.array([self.finger3[0:3],
+                              self.finger3[3:6],
+                              self.finger3[6:9],
+                              self.finger3[9:12],
+                              self.finger3[12:15],
+                              self.finger3[15:18],
+                              self.finger3[18:21],
+                              self.finger3[21:24]])
+
+        x = self.spread[0:5]
+        x.insert(0, 0)
+        x.append(0)
+        y = self.spread[19:24]
+        y.insert(0, 0)
+        y.append(0)
+        dataTest3 = np.array([x,
+                              self.spread[5:12],
+                              self.spread[12:19],
+                              y])
+        # dataTest3.
+        plt.clf()
+        ax = fig.add_subplot(221)
+        ax.imshow(dataTest)
+        ax = fig.add_subplot(222)
+        ax.imshow(dataTest1)
+        ax = fig.add_subplot(223)
+        ax.imshow(dataTest2)
+        ax = fig.add_subplot(224)
+        ax.imshow(dataTest3)
+        plt.pause(0.09)
+
+        plt.ioff()
     def GetData(self):
-        return this.sensorData
+        return self.sensorData
     def DynamicData(self):
         dataTest=[]
         plt.ion()

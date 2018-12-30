@@ -25,16 +25,20 @@ def Action():
          T[2].start()
 
 def Record():
-    csv=CSVRecord.Record("C:\Users\hekon\Desktop\kk",sensor.GetData())
+    csv=CSVRecord()
+    csv.Record("E:\OneDrive\Python\BHand\Data\kong",sensor.GetData())
 
 
 
-Thr = TH.Thread(target=Record)
+Thr = TH.Thread(target=ImgShow)
 T.append(Thr)
+T[0].setDaemon(True)
 Thr1 = TH.Thread(target=Action)
 T.append(Thr1)
-Thr2 = TH.Thread(target=Action)
+T[1].setDaemon(True)
+Thr2 = TH.Thread(target=Record)
 T.append(Thr2)
+T[2].setDaemon(True)
 T[0].start()
 T[1].start()
 
