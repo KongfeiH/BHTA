@@ -74,7 +74,47 @@ class Hand():
         # ... and don't forget to stop the spread quickly.
         hand.set_property(SPREAD, MODE, MODE_IDLE)
         return True
+    def CloseSpeedControl(self):
+        hand.set_property(SPREAD, V, 0)
+        hand.set_property(FINGER1, V, 80)  # Units are encoder counts per second
+        hand.set_property(FINGER2, V, 80)
+        hand.set_property(FINGER3, V, 80)
 
+        # Set the timestop property to wait an arbitrarily long amount of time.
+        # In general, the argument to TSTOP is amount of time in miliseconds that the
+        # hand will wait to finish moving. Setting TSTOP to 0, however, makes that
+        # tolerance level infinite. By default, the fingers wait 50 ms, and the spread
+        # waits up to 150 ms.
+        hand.set_property(HAND_GROUP, TSTOP, 0)
+
+        # The hand must now go into velocity mode to move.
+        hand.set_property(HAND_GROUP, MODE, MODE_VEL)
+        time.sleep(3)
+        hand.set_property(HAND_GROUP, MODE, MODE_IDLE)
+
+        # Using the exact same process, we close the fingers.
+    #    hand.set_property(FINGER1, V, -200)
+    #    hand.set_property(FINGER2, V, -200)
+    #    hand.set_property(FINGER3, V, -200)
+    #    hand.set_property(HAND_GROUP, MODE, MODE_VEL)
+    #    time.sleep(1.5)
+    #    hand.set_property(HAND_GROUP, MODE, MODE_IDLE)
+
+    ##   # Now, we open and close the spread.
+    #   hand.set_property(HAND_GROUP, V, 0)
+    #   hand.set_property(SPREAD, V, 60)
+    #   hand.set_property(SPREAD, MODE, MODE_VEL)
+    #   time.sleep(1.5)
+    #   hand.set_property(SPREAD, MODE, MODE_IDLE)
+    #   hand.set_property(SPREAD, V, -60)
+    #   hand.set_property(SPREAD, MODE, MODE_VEL)
+    #   time.sleep(1.5)
+
+        # Because having an infinite timestop can wear out the hand, we now return them
+        # to their default values.
+        hand.set_property(HAND_GROUP, TSTOP, 50)
+        hand.set_property(SPREAD, TSTOP, 150)
+        return True
     def Test(self):
         hand.set_property(HAND_GROUP, M, MIN_ENC)
         hand.set_property(SPREAD, MODE, MODE_IDLE)
@@ -202,11 +242,14 @@ class SensorShow(HandSensor):
         fig = plt.figure()
         plt.ion()
         while True:
+           # timeb=time.time()
             self.sensorData=np.vstack((self.sensorData,self.finger1+self.finger2+self.finger3+self.spread))
 
            # self.Show()
-            time.sleep(0.09)
+            time.sleep(0.036)
             self.get_full_tact()
+         #   timee=time.time()
+         #   print timee-timeb
     def Show(self):
         dataTest = np.array([self.finger1[0:3],
                              self.finger1[3:6],

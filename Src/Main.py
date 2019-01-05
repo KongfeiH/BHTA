@@ -20,13 +20,14 @@ def ImgShow():
     sensor.DataShow()
 
 def Action():
-         hand.Close()
+         hand.CloseSpeedControl()
          time.sleep(2)
          T[2].start()
 
 def Record():
     csv=CSVRecord()
-    csv.Record("E:\OneDrive\Python\BHand\Data\kong",sensor.GetData())
+    csv.Record("E:\OneDrive\Python\BHand\Data\None\N01S10",sensor.GetData())
+    print "Record Finished!"
 
 
 
