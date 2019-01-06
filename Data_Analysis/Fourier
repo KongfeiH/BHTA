@@ -1,0 +1,26 @@
+from scipy.fftpack  import rfft
+from scipy.fftpack import fftshift
+from scipy.signal import medfilt,filtfilt,wiener,detrend
+
+from scipy import  signal
+import numpy as np
+import matplotlib.pyplot as plt
+data=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Glass_Cup\GC01S7.csv","rb"),delimiter=",",skiprows=0)
+#data=data.T
+D=data[:,5]
+data_fft =fftshift(rfft(D))
+a,b=signal.butter(1,0.005,"highpass")
+D1=filtfilt(a,b,D)
+plt.subplot(221)
+plt.plot(D)
+plt.legend("频域")
+plt.subplot(222)
+plt.plot(data_fft)
+plt.legend()
+plt.subplot(223)
+plt.plot(D1)
+plt.legend()
+plt.subplot(224)
+plt.plot(fftshift(rfft(D1)))
+plt.legend()
+plt.show()
