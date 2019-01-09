@@ -1,0 +1,33 @@
+from scipy.fftpack  import rfft
+from scipy.fftpack import fftshift
+from scipy.signal import medfilt,filtfilt,wiener,detrend
+import pandas as pd
+import statsmodels.api as sm
+from scipy import  signal
+import numpy as np
+import matplotlib.pyplot as plt
+data=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Ragdoll\RD01S5.csv","rb"),delimiter=",",skiprows=0)
+datachoice=data[:,1:2]
+#计算阶次2
+datachoice=pd.Series(datachoice.reshape(-1))
+print(datachoice)
+datasentiment=datachoice.diff(1)
+#datasentiment=datasentiment.diff(1)
+plt.plot(datasentiment)
+print(datasentiment,datachoice)
+
+from statsmodels.tsa import  stattools as sta
+from statsmodels.graphics.tsaplots import *
+
+fig = plt.figure(figsize=(12,8))
+ax1=fig.add_subplot(211)
+acf = sm.graphics.tsa.plot_acf(datasentiment,lags=40,ax=ax1)
+ax2 = fig.add_subplot(212)
+pacf = sm.graphics.tsa.plot_pacf(datasentiment,lags=40,ax=ax2)
+plt.show()
+model = sm.tsa.ARIMA(datachoice,(1,1,1)).fit()
+prediction = model.predict(dynamic=True)
+print(prediction)
+plt.plot(prediction)
+plt.plot(datachoice)
+plt.show()
