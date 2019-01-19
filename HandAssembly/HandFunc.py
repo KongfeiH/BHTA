@@ -18,7 +18,7 @@ import time
 import matplotlib.pyplot as plt
 import matplotlib as cm
 import numpy as np
-
+PCAN_ERROR_OK = 0           #PCAN Error Value for no error
 
 # Set up constants. A complete list of property ids can be found online at
 # http://web.barrett.com/support/Puck_Documentation/PuckProperties-r200.pdf
@@ -193,9 +193,9 @@ class Hand():
         return True
     def CloseSpeedControl(self):
         hand.set_property(SPREAD, V, 0)
-        hand.set_property(FINGER1, V, 80)  # Units are encoder counts per second
-        hand.set_property(FINGER2, V, 80)
-        hand.set_property(FINGER3, V, 80)
+        hand.set_property(FINGER1, V, 70)  # Units are encoder counts per second
+        hand.set_property(FINGER2, V, 70)
+        hand.set_property(FINGER3, V, 70)
 
         # Set the timestop property to wait an arbitrarily long amount of time.
         # In general, the argument to TSTOP is amount of time in miliseconds that the
@@ -362,30 +362,31 @@ class HandSensor(object):
 class SensorShow(HandSensor):
     def __init__(self):
          super(SensorShow,self).__init__()
+
          self.force=ftsstr()
-         self.sensorData = np.array(self.finger1+self.finger2+self.finger3+self.spread+\
-                                    hand.get_strain(FINGER1)+ hand.get_strain(FINGER2)+hand.get_strain(FINGER3)+\
-                                    hand.get_position(FINGER1)+ hand.get_position(FINGER2)+hand.get_position(FINGER3)+ \
-                                    self.force.Force)
+         self.sensorData = np.array(self.finger1+self.finger2+self.finger3+self.spread)#+self.force.Force)
+         self.ISContinue=True
          #self.DataShow()
 
     def DataShow(self):
         #fig = plt.figure()
         # plt.ion()
-        while True:
-           # timeb=time.time()
+        a = time.time()
+        while self.ISContinue:
+
 
 
            # self.Show()
-            time.sleep(0.036)
+           # time.sleep(0.036)
             self.get_full_tact()
-            self.force.update()
-            self.sensorData = np.vstack((self.sensorData, self.finger1 + self.finger2 + self.finger3 + self.spread   +\
-                                     hand.get_strain(FINGER1) + hand.get_strain(FINGER2) + hand.get_strain(FINGER3)  +\
-                                     hand.get_position(FINGER1)+hand.get_position(FINGER2)+hand.get_position(FINGER3)+\
-                                     self.force.Force))
-         #   timee=time.time()
-         #   print timee-timeb
+          #  timeb = time.time()
+           # self.force.update()
+            self.sensorData = np.vstack((self.sensorData,
+                                         self.finger1 + self.finger2 + self.finger3 + self.spread))# +self.force.Force))
+            b=time.time()
+           # if (b-a)>3:
+          #      self.ISContinue=False
+
     def Show(self):
         dataTest = np.array([self.finger1[0:3],
                              self.finger1[3:6],
