@@ -102,6 +102,16 @@ def STRTOHEX(str):
     Hex[4] =eval(data[16]) * 8 +eval(data[17]) * 4 + eval(data[18]) * 2 + eval(data[19] * 1)
     Hex[5] =eval(data[20]) * 8 +eval(data[21]) * 4 + eval(data[22]) * 2 + eval(data[23] * 1)
     return Hex
+def STRTOTEN(str):
+    data=str
+
+    Ten =eval(data[0])  * 8 +eval(data[1] ) * 4 + eval(data[2] ) * 2 + eval(data[3]  * 1)+\
+         eval(data[4])  * 8 +eval(data[5] ) * 4 + eval(data[6])  * 2 + eval(data[7]  * 1)+\
+         eval(data[8])  * 8 +eval(data[9] ) * 4 + eval(data[10]) * 2 + eval(data[11] * 1)+\
+         eval(data[12]) * 8 + eval(data[13]) *4 + eval(data[14]) * 2 + eval(data[15] * 1)+\
+         eval(data[16]) * 8 +eval(data[17]) * 4 + eval(data[18]) * 2 + eval(data[19] * 1)+\
+         eval(data[20]) * 8 +eval(data[21]) * 4 + eval(data[22]) * 2 + eval(data[23] * 1)
+    return Ten
 
 print(STRTOHEX(aHash(t(data1))))
 print(STRTOHEX(aHash(t(data2))))
@@ -112,7 +122,3 @@ print(STRTOHEX(aHash(t(data4))))
 print(STRTOHEX(aHash(t(data5))))
 print(STRTOHEX(aHash(t(data6))))
 
-noram=PP.normalize(STRTOHEX(aHash(t(data4))))
-print noram
-stand=PP.scale(STRTOHEX(aHash(t(data4))))
-print stand
