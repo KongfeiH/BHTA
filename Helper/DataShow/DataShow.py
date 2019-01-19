@@ -65,7 +65,7 @@ class DataShow():
         fig = plt.figure()
         ax = fig.add_subplot(111)
         ax.plot(Matrix_data)
-       # ax1 = fig.add_subplot(222)
+       # ax1 = fig.add_subplot(212)
        # ax1.plot(Matrix_data1)
        # ax2 = fig.add_subplot(223)
        # ax2.plot(Matrix_data2)

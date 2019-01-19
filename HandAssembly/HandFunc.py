@@ -55,7 +55,7 @@ class Hand():
         hand.initialize()
         hand.init_hand()
 
-        print "OK"
+      #  print "OK"
 
     def OpenACloseDemo(self):
         hand.close_grasp()
@@ -153,8 +153,18 @@ class Hand():
 
          hand.set_property(HAND_GROUP, MODE, MODE_IDLE)
 
-         print "OK"
-
+#         print "OK"
+    def ClosePositionControl(self):
+        # Close fingers by setting the Move target to fully closed.
+        hand.set_property(FINGER1, M, MAX_ENC)
+        hand.set_property(FINGER2, M, MAX_ENC)
+        hand.set_property(FINGER3, M, MAX_ENC)
+        # ... and don't forget to stop the spread quickly.
+        hand.set_property(SPREAD, MODE, MODE_IDLE)
+        # Now we wait for the fingers to stop moving so that fingers and spread don't
+        # run into one another.
+        time.sleep(1.5)
+        pass
 
 class HandSensor(object):
 

@@ -5,14 +5,20 @@ from scipy.signal import medfilt,filtfilt,wiener,detrend
 from scipy import  signal
 import numpy as np
 import matplotlib.pyplot as plt
-data=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Glass_Cup\GC01S7.csv","rb"),delimiter=",",skiprows=0)
+data=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Ragdoll\RD01S4.csv","rb"),delimiter=",",skiprows=0)
+none=np.loadtxt(open(r"E:\OneDrive\Python\BHand\Data\None\\N01S5.csv","rb"),delimiter=",",skiprows=0)
+D=(data-none)[:,2:13]
 #data=data.T
-D=data[:,7:8]
+#D=data[:,:]
 data_fft =fftshift(rfft(D))
-#a,b=signal.butter(1,0.26,"lowpass")
-#D1=filtfilt(a,b,D)
-plt.subplot(111)
+b,a=signal.butter(1,0.08,"lowpass")
+D1=filtfilt(b,a,D)
+plt.subplot(211)
+#plt.plot(data_fft)
+plt.plot(D1)
+plt.subplot(212)
 plt.plot(D)
+#plt.plot(data_fft)
 #plt.legend("频域")
 #plt.subplot(212)
 #plt.plot(data_fft)

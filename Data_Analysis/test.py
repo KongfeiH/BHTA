@@ -15,9 +15,9 @@ data4=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Glass_Cup\GC01S1.csv","rb")
 data5=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Glass_Cup\GC01S2.csv","rb"),delimiter=",",skiprows=0)
 
 
-data6=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Ragdoll\RD01S0.csv","rb"),delimiter=",",skiprows=0)
-data7=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Ragdoll\RD01S1.csv","rb"),delimiter=",",skiprows=0)
-data8=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Ragdoll\RD01S2.csv","rb"),delimiter=",",skiprows=0)
+data6=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Book\BK01S0.csv","rb"),delimiter=",",skiprows=0)
+data7=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Book\BK01S1.csv","rb"),delimiter=",",skiprows=0)
+data8=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Book\BK01S2.csv","rb"),delimiter=",",skiprows=0)
 
 
 
@@ -25,35 +25,29 @@ data8=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Ragdoll\RD01S2.csv","rb"),d
 #plt.show()
 data_fft =fftshift(rfft(data.T))
 
-plt.subplot(331)
+plt.subplot(321)
 plt.plot(data)
 plt.grid()
-plt.subplot(332)
+plt.subplot(322)
 plt.plot(data1)
 plt.grid()
-plt.subplot(333)
-plt.plot(data2)
-plt.grid()
 
-plt.subplot(334)
+
+plt.subplot(323)
 plt.plot(data3)
 plt.grid()
-plt.subplot(335)
+plt.subplot(324)
 plt.plot(data4)
 plt.grid()
-plt.subplot(336)
-plt.plot(data5)
-plt.grid()
 
-plt.subplot(337)
+
+plt.subplot(325)
 plt.plot(data6)
 plt.grid()
-plt.subplot(338)
+plt.subplot(326)
 plt.plot(data7)
 plt.grid()
-plt.subplot(339)
-plt.plot(data8)
-plt.grid()
+
 plt.show()
 '''
 
