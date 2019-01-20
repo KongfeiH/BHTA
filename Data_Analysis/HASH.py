@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import preprocessing as PP
 def t(data):
-    x=data.T[:,50]
+    x=data.T[:,79]
     x=x*(x>1.5)
     dataTest = np.array([x[0:3],
                         x[3:6],
@@ -83,14 +83,17 @@ def dHash(img):
     return hash_str
 
 
-data1=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Book\BK01S3.csv","rb"),delimiter=",",skiprows=0)
-data2=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Book\BK01S4.csv","rb"),delimiter=",",skiprows=0)
+data1=np.loadtxt(open(r"E:\OneDrive\Python\BHand\Data\SF\Tilt\0D\MW\Failed\TMW139.csv","rb"),delimiter=",",skiprows=0)
+data2=np.loadtxt(open(r"E:\OneDrive\Python\BHand\Data\SF\Tilt\0D\MW\Failed\TMW140.csv","rb"),delimiter=",",skiprows=0)
 
-data3=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Drink_Bottle\DB01S1.csv","rb"),delimiter=",",skiprows=0)
-data4=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Drink_Bottle\DB01S2.csv","rb"),delimiter=",",skiprows=0)
+data3=np.loadtxt(open(r"E:\OneDrive\Python\BHand\Data\SF\Tilt\0D\MW\Failed\TMW141.csv","rb"),delimiter=",",skiprows=0)
+data4=np.loadtxt(open(r"E:\OneDrive\Python\BHand\Data\SF\Tilt\0D\MW\Failed\TMW142.csv","rb"),delimiter=",",skiprows=0)
 
-data5=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Glass_Cup\GC01S4.csv","rb"),delimiter=",",skiprows=0)
-data6=np.loadtxt(open("E:\OneDrive\Python\BHand\Data\Glass_Cup\GC01S5.csv","rb"),delimiter=",",skiprows=0)
+data5=np.loadtxt(open(r"E:\OneDrive\Python\BHand\Data\SF\Tilt\0D\MW\Success\TMW146.csv","rb"),delimiter=",",skiprows=0)
+data6=np.loadtxt(open(r"E:\OneDrive\Python\BHand\Data\SF\Tilt\0D\MW\Success\TMW147.csv","rb"),delimiter=",",skiprows=0)
+
+data7=np.loadtxt(open(r"E:\OneDrive\Python\BHand\Data\SF\Tilt\0D\MW\Success\TMW149.csv","rb"),delimiter=",",skiprows=0)
+data8=np.loadtxt(open(r"C:\Users\hekon\Desktop\T.csv","rb"),delimiter=",",skiprows=0)
 
 def STRTOHEX(str):
     data=str
@@ -122,3 +125,5 @@ print(STRTOHEX(aHash(t(data4))))
 print(STRTOHEX(aHash(t(data5))))
 print(STRTOHEX(aHash(t(data6))))
 
+print(STRTOHEX(aHash(t(data7))))
+print(STRTOHEX(aHash(t(data8))))

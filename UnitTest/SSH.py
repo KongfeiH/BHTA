@@ -2,7 +2,7 @@ import paramiko
 import  time
 from  sys import stdin as IN
 import sys
-
+name="T"
 sys.path.append('../HandAssembly')
 sys.path.append('../Helper/DataToCSV')
 sys.path.append('../pyHand/pyHand_API')
@@ -71,7 +71,8 @@ if True:#aa.recv(1000)=="./ex03_simple_move\n>>> The WAM needs to be zeroed. Ple
 time.sleep(5)
 print aa.recv(1000)
 
-aa.send("j 0 -1.5 0 -0.6\n")
+#aa.send("j 0 -1.98 0.046 0.36\n")
+aa.send("j 0 -1.4 0 -0.88\n")
 time.sleep(3)
 print aa.recv(1000)
 hand = Hand()
@@ -91,12 +92,12 @@ def Action():
 
 def Record():
     csv=CSVRecord()
-    csv.Record("C:\Users\hekon\Desktop\T",sensor.GetData())
+    csv.Record("C:\Users\hekon\Desktop\\"+name,sensor.GetData())
     print "Record Tactile Finished!"
     Strain = [BT.get_strain(FINGER1), BT.get_strain(FINGER2), BT.get_strain(FINGER3), \
               BT.get_position(FINGER1),BT.get_position(FINGER2),BT.get_position(FINGER3),
               BT.get_position(SPREAD)]
-    csv.Record("C:\Users\hekon\Desktop\T1",Strain)
+    csv.Record("C:\Users\hekon\Desktop\\"+name+"S",Strain)
     print "Record Strain Finished!"
     ISOK=False
 
