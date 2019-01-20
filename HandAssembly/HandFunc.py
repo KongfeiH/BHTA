@@ -245,6 +245,13 @@ class Hand():
         hand.set_property(SPREAD, M, MIN_ENC)
         hand.set_property(SPREAD, MODE, MODE_IDLE)
         time.sleep(1.5)
+
+    def MOVETOX(self):
+        hand.set_property(SPREAD, M, 10000)
+       # hand.set_property(SPREAD, MODE, MODE_IDLE)
+        time.sleep(1.5)
+
+    #    time.sleep(1.5)
     def PositionTest(self):
 
          # Close fingers by setting the Move target to fully closed.

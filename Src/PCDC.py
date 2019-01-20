@@ -12,8 +12,7 @@ import numpy as np
 import threading as TH
 
 hand = Hand()
-sensor=SensorShow()
-T=[]
+hand.MOVETOX()
 # Now that we've completed the class definition, let's implement it.
 
 

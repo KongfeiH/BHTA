@@ -2,7 +2,7 @@ import paramiko
 import  time
 from  sys import stdin as IN
 import sys
-name="T"
+name="XYHH25"
 sys.path.append('../HandAssembly')
 sys.path.append('../Helper/DataToCSV')
 sys.path.append('../pyHand/pyHand_API')
@@ -61,22 +61,23 @@ aa=ssh.invoke_shell()
 aa.settimeout(9000)
 #time.sleep(5)
 aa.send("cd Eric_WorkSpace/libbarrett_examples/\n")
-time.sleep(10)
+time.sleep(1)
 print aa.recv(1000)
 
 aa.send("./ex03_simple_move\n")
 if True:#aa.recv(1000)=="./ex03_simple_move\n>>> The WAM needs to be zeroed. Please move it to its home position, then press [Enter].\n":
     aa.send("\n")
 
-time.sleep(5)
+time.sleep(1)
 print aa.recv(1000)
 
 #aa.send("j 0 -1.98 0.046 0.36\n")
 aa.send("j 0 -1.4 0 -0.88\n")
-time.sleep(3)
+time.sleep(1)
 print aa.recv(1000)
 hand = Hand()
-time.sleep(10)
+#hand.MOVETOX()
+time.sleep(1)
 
 sensor = SensorShow()
 def ImgShow():
@@ -117,8 +118,9 @@ def RECORDCVS():
 RECORDCVS()
 while sensor.ISContinue:
     pass
+time.sleep(10)
 aa.send("h\n")
-time.sleep(15)
+time.sleep(10)
 print aa.recv(1000)
 
 aa.send("i\n")
